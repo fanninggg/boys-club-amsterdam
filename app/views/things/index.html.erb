@@ -12,9 +12,9 @@
   <h1>Full List Of Things To Do</h1>
 
   <% @things.each do |thing| %>
-   <p><%= thing.name %></p>
+    <%= link_to thing_path(thing) do %>
+     <p><%= thing.name %></p>
+    <% end %>
   <% end %>
-  <p>Remember to heroku config:set MAPBOX_API_KEY=blah</p>
-
 </div>
 
