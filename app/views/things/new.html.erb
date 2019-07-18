@@ -4,8 +4,9 @@
   <%= simple_form_for @thing do |f| %>
     <%= f.input :name %>
     <%= f.input :category %>
-    <%= f.input :website %>
     <%= f.input :address %>
+    <%= f.input :notes %>
+    <%= f.input :website %>
     <%= f.submit "Add Activity", class: "btn btn-primary" %>
   <% end %>
 

@@ -42,12 +42,13 @@ class ThingsController < ApplicationController
   def destroy
     @thing = Thing.find(params[:id])
     @thing.destroy
+    redirect_to things_path
   end
 
   private
 
   def thing_params
-    params.require(:thing).permit(:name, :category, :website)
+    params.require(:thing).permit(:name, :category, :website, :notes, :address, :latitude, :longitude)
   end
 
 end

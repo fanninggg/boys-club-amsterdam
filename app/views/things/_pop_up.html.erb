@@ -1,6 +1,9 @@
 <div class="popup-window">
   <p><%= thing.name %></p>
-  <p><%= thing.website %></p>
   <p><%= thing.address %></p>
-  <%= link_to "Edit/Delete", edit_thing_path(thing) %>
+  <p><%= thing.notes %></p>
+  <div class="popup-ctas">
+    <%= link_to "Edit", edit_thing_path(thing), class: "btn btn-danger" %>
+    <a href="<%= thing.website %>" class="btn btn-primary">Website</a>
+  </div>
 </div>
