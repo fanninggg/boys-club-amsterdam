@@ -5,3 +5,11 @@
 .form-title {
   text-align: center;
 }
+
+input[type="text"]::placeholder {
+  color: #ced4da;
+}
+
+select option:first-child {
+  color: #ced4da !important;
+}

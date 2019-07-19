@@ -1,9 +1,9 @@
 <div class="form-container">
-  <h3 class="form-title">Add a new activity you mincebag</h3>
+  <h3 class="form-title">Add a new activity</h3>
 
   <%= simple_form_for @thing do |f| %>
     <%= f.input :name, placeholder: "Name", label: false %>
-    <%= f.input :category, placeholder: "Category", label: false %>
+    <%= f.input :category, prompt: "Category", label: false, :collection => %w[Coffeeshop Food Bar Other] %>
     <%= f.input :address, placeholder: "Address", label: false %>
     <%= f.input :notes, placeholder: "Notes", label: false %>
     <%= f.input :website, placeholder: "Website", label: false %>
