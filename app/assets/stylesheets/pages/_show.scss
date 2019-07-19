@@ -5,4 +5,9 @@
   position: absolute;
   bottom: -20vh;
   right: -20vw;
+  z-index: -1;
+  @media (min-width: 481px){
+    bottom: 0;
+    right: 0;
+  }
 }

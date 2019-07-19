@@ -1,5 +1,10 @@
 .form-container {
   padding: 20px;
+  @media (min-width: 481px) {
+    width: 50vw;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .form-title {
