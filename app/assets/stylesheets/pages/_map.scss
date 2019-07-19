@@ -7,6 +7,13 @@
   display: none;
 }
 
+.mapboxgl-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
 .index-icons {
   width: 25px;
   height: 25px;
@@ -32,3 +39,4 @@
 .attraction-card-links {
   margin-top: 5px;
 }
+

@@ -32,6 +32,7 @@ class ThingsController < ApplicationController
 
   def show
     @thing = Thing.find(params[:id])
+    @background_picture = marker_image(@thing.category)
   end
 
   def new
