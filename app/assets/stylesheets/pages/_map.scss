@@ -7,11 +7,11 @@
   display: none;
 }
 
-.mapboxgl-marker {
+
+.high-z {
+  z-index: 10;
   position: absolute;
-  top: 0;
-  left: 0;
-  will-change: transform;
+  background-color: red
 }
 
 .index-icons {
@@ -41,3 +41,9 @@
   margin-top: 5px;
 }
 
+.mapboxgl-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
