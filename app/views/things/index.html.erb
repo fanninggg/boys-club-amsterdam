@@ -7,14 +7,57 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
 
-  <%= link_to "Add an activity", new_thing_path, class: "btn btn-lg btn-primary my-2 mx-auto" %>
+  <h4 class="my-3 text-center">Full List Of Things To Do</h4>
 
-  <h4>Full List Of Things To Do</h4>
+  <div class="container">
+    <div class="attraction-card">
+      <div class="attraction-card-title-holder"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Cannabis_leaf.svg" alt="" class="index-icons icon-spacer"><span>Coffeeshops</span></div>
+      <div class="attraction-card-links">
+        <% @coffeeshops.each do |coffeeshop| %>
+          <%= link_to thing_path(coffeeshop), class: "btn btn-attraction btn-primary" do %>
+            <%= coffeeshop.name %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
 
-  <% @things.each do |thing| %>
-    <%= link_to thing_path(thing) do %>
-     <p><%= thing.name %></p>
-    <% end %>
-  <% end %>
+    <div class="attraction-card">
+      <div class="attraction-card-title-holder"><img src="https://www.svgrepo.com/show/169724/burger.svg" alt="" class="index-icons icon-spacer"><span>Places to Eat</span></div>
+      <div class="attraction-card-links">
+        <% @foods.each do |food| %>
+          <%= link_to thing_path(food), class: "btn btn-attraction btn-primary" do %>
+            <%= food.name %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="attraction-card">
+      <div class="attraction-card-title-holder"><img src="http://clipart-library.com/newimages/beer-mug-clip-art-9.png" alt="" class="index-icons icon-spacer"><span>Cafés & Bars</span></div>
+      <div class="attraction-card-links">
+        <% @bars.each do |bar| %>
+          <%= link_to thing_path(bar), class: "btn btn-attraction btn-primary" do %>
+            <%= bar.name %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="attraction-card">
+      <div class="attraction-card-title-holder"><img src="https://image.flaticon.com/icons/svg/33/33622.svg" alt="" class="index-icons icon-spacer"><span>Other Attractions</span></div>
+      <div class="attraction-card-links">
+        <% @others.each do |other| %>
+          <%= link_to thing_path(other), class: "btn btn-attraction btn-primary" do %>
+            <%= other.name %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <%= link_to "Add an activity", new_thing_path, class: "btn btn-lg btn-success my-2 white" %>
+    </div>
+  </div>
+
 </div>
 

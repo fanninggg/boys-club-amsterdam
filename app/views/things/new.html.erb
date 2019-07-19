@@ -7,8 +7,9 @@
     <%= f.input :address, placeholder: "Address", label: false %>
     <%= f.input :notes, placeholder: "Notes", label: false %>
     <%= f.input :website, placeholder: "Website", label: false %>
-    <%= f.submit "Add Activity", class: "btn btn-primary" %>
+    <div class="popup-ctas">
+      <%= link_to "Home", things_path, class: "btn btn-warning" %>
+      <%= f.submit "Add Activity", class: "btn btn-success white" %>
+    </div>
   <% end %>
-  <p></p>
-  <%= link_to "Home", things_path, class: "btn btn-warning" %>
 </div>

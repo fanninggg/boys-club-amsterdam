@@ -6,3 +6,29 @@
 .mapboxgl-ctrl-bottom-right {
   display: none;
 }
+
+.index-icons {
+  width: 25px;
+  height: 25px;
+}
+
+.attraction-card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.attraction-card-title-holder {
+  display: flex;
+  align-items: center;
+}
+
+.btn-attraction {
+  padding: 5px 10px;
+  margin: 3px;
+}
+
+.attraction-card-links {
+  margin-top: 5px;
+}

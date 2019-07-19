@@ -2,6 +2,10 @@ class ThingsController < ApplicationController
 
   def index
     @things = Thing.where.not(latitude: nil, longitude: nil)
+    @coffeeshops = @things.where(category: "Coffeeshop")
+    @foods = @things.where(category: "Food")
+    @bars = @things.where(category: "Bar")
+    @others = @things.where(category: "Other")
 
     @markers = @things.map do |thing|
       {

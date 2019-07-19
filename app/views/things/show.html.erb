@@ -6,6 +6,8 @@
   <p>Website: <a href="<%= @thing.website %>"><%= @thing.website %></a>
   <p>Address: <%= @thing.address %></p>
 
-  <%= link_to "Edit", edit_thing_path, class: "btn btn-danger" %>
-  <%= link_to "Home", things_path, class: "btn btn-warning" %>
+  <div class="popup-ctas">
+    <%= link_to "Edit", edit_thing_path, class: "btn btn-danger" %>
+    <%= link_to "Home", things_path, class: "btn btn-warning" %>
+  </div>
 </div>
