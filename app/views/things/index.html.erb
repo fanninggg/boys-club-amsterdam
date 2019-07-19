@@ -1,7 +1,7 @@
 <div class="map-page">
   <div
     id="map"
-    style="width: 100%;
+    style="width: 100vw;
     height: calc(100vh - 60px);"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
@@ -9,7 +9,7 @@
 
   <%= link_to "Add an activity", new_thing_path, class: "btn btn-lg btn-primary my-2 mx-auto" %>
 
-  <h1>Full List Of Things To Do</h1>
+  <h4>Full List Of Things To Do</h4>
 
   <% @things.each do |thing| %>
     <%= link_to thing_path(thing) do %>

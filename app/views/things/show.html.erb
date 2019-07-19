@@ -1,9 +1,11 @@
-<h1><%= @thing.name %></h1>
+<div class="form-container">
+  <h1><%= @thing.name %></h1>
 
-<p><%= @thing.category %></p>
-<p><%= @thing.notes %></p>
-<p><%= @thing.website %></p>
-<p><%= @thing.address %></p>
+  <p>Category: <%= @thing.category %></p>
+  <p>Notes: <%= @thing.notes %></p>
+  <p>Website: <a href="<%= @thing.website %>"><%= @thing.website %></a>
+  <p>Address: <%= @thing.address %></p>
 
-<%= link_to "Edit this bag of mince", edit_thing_path %>
-<%= link_to "Home", things_path %>
+  <%= link_to "Edit", edit_thing_path, class: "btn btn-danger" %>
+  <%= link_to "Home", things_path, class: "btn btn-warning" %>
+</div>

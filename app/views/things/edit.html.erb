@@ -27,8 +27,8 @@
 
     <%= f.submit class: 'btn btn-primary' %>
   <% end %>
-
-  <%= link_to "Delete", thing_path, method: :delete %>
-
-  <%= link_to "Home", things_path %>
+  <p></p>
+  <%= link_to "Delete", thing_path, method: :delete, class: "btn btn-danger" %>
+  <p></p>
+  <%= link_to "Home", things_path, class: "btn btn-warning" %>
 </div>

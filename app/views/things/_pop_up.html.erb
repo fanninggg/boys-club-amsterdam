@@ -1,9 +1,9 @@
 <div class="popup-window">
-  <p><%= thing.name %></p>
-  <p><%= thing.address %></p>
-  <p><%= thing.notes %></p>
+  <p class="raleway"><i class="fas fa-tag icon-spacer"></i><%= thing.name %></p>
+  <p class="raleway"><i class="fas fa-map-marker-alt icon-spacer pin-color"></i><%= thing.address %></p>
+  <p class="raleway"><i class="fas fa-info-circle icon-spacer info-color"></i><%= thing.notes == "" ? "No Notes" : thing.notes %></p>
   <div class="popup-ctas">
-    <%= link_to "Edit", edit_thing_path(thing), class: "btn btn-danger" %>
-    <a href="<%= thing.website %>" class="btn btn-primary">Website</a>
+    <%= link_to "Edit", edit_thing_path(thing), class: "btn btn-small btn-danger" %>
+    <a target="blank" href="<%= thing.website %>" class="btn btn-small btn-primary">Website</a>
   </div>
 </div>
